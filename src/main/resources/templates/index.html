@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Producto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <h1 class="mt-4">Ingreso de Productos</h1>
+			<div class="card mb-4">
+            	<div class="card-body">
+            		<form method="post" th:action="@{/procesar}" th:object="${producto}">
+	            		<div class="form-group"><label class="small mb-1" for="codigo">Codigo Producto </label><input class="form-control py-4" th:field="*{idProducto}" id="usuario" type="text" placeholder="Ingrese Id producto" style="width: 400px" name="nombre" />
+	            		<span th:errors="*{idProducto}" style="color: #FF0000"></span></div>
+	                    <div class="form-group"><label class="small mb-1" for="nombre">Nombre Producto </label><input class="form-control py-4" th:field="*{nombreProducto}" id="password" type="text" placeholder="Ingrese Nombre prod." style="width: 400px" name="apellido"/>
+	                    <span th:errors="*{nombreProducto}"style="color: #FF0000"></span></div>
+	                    <div class="form-group"><label class="small mb-1" for="Marca">Marca </label><input class="form-control py-4" th:field="*{marca}" id="fechaN" type="text" placeholder="Ingrese marca prod." style="width: 400px" name="fechaN"/>
+	                    <span th:errors="*{marca}"style="color: #FF0000"></span></div>
+	                    <div class="form-group"><label class="small mb-1" for="descripcion">Descripcion </label><input class="form-control py-4" th:field="*{descripcion}" id="lugar" type="text" placeholder="Ingrese Descrip. Prod." style="width: 400px" name="lugar"/>
+	                    <span th:errors="*{descripcion}"style="color: #FF0000"></span></div>
+	                    <div class="form-group"><label class="small mb-1" for="existencias">Existencias </label><input class="form-control py-4" th:field="*{existencia}" id="instituto" type="text" placeholder="Ingrese existencias prod." style="width: 400px" name="instituto"/>
+	                    <span th:errors="*{existencia}"style="color: #FF0000"></span></div>
+	                    <div class="form-group"><label class="small mb-1" for="FIngreso">Fecha Ingreso </label><input class="form-control py-4" th:field="*{fecha}" id="tel" type="text" placeholder="DD/MM/YYYY" style="width: 400px" name="tel"/>
+	                    <span th:errors="*{fecha}"style="color: #FF0000"></span></div>
+	                    <div class="form-group"><input type="submit" class="btn btn-primary" value="Guardar Producto"></a></div>
+	                </form>
+            	</div>
+            </div>
+</body>
+</html>
